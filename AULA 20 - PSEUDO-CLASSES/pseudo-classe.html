@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        /* personalizando as divs criadas no corpo html
+        pseudo-class, diz sobre estado, representada sobre o : 
+        active: quando elemento é clicado
+        hover: quando passamos o mouse por cima*/
+        div {
+            display: inline-block; /* deixa o display(visualização) tudo na mesma linha*/
+            color: green;
+            background-color: lightgrey;
+            border: 1px solid black;
+            text-align: center;
+            width: 200px;
+            height: 200px;            
+        }
+        div#d1 {
+            background-color: black;
+        }
+
+        div:hover {
+            background-color: blue;
+        }
+        div:active {
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- criação de divs, de acordo com seu id-->
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>

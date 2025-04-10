@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(137, 145, 153);
+            margin: 0; /* retirando a margin do body*/
+        }
+        
+        /* congigurando seção header do site*/
+        header {
+            width: 200px;
+            background-color: white;
+            padding: 10px; /* padding que deixa o conteúdo afastado da margin, conforme valor definido */
+            margin: 10px; /* margin afasta ou aproxima a caixa em questão das outras externas, de acordo com valor informado na configuração*/ 
+        }
+
+        h1 {
+            box-shadow: inset 1px 4px 12px 1px rgba(0, 0, 0, 0.5); /* adicionando uma sombra interna, de acordo com a adição do parâmetro inset antes dos outros */
+        }
+
+        /* alterando a seção nav do site*/
+        nav {
+            background-color: grey;
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.308); /* adicionando a sombra com a shorthand box-shadow. Paramêtros: 
+            deslocamento-x | deslocamento-y | blur | spread | cor
+            A cor deve ser de tom baixo, reduzindo a evidenciação que há sombra no elemento em questão*/   
+        }
+
+        /* configurando os links(a) dentro do nav, ou seja (representado pelo símbolo >)*/
+        nav > a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 2px;
+        }
+
+        /* configurando quando passarmos o mouse por cima dos links que estão dentro do nav com a pseudo-class :hover*/
+        nav > a:hover {
+            color: rgb(10, 10, 10);
+            text-decoration: underline;
+        }
+
+        /* congigurando coisas específicas para o main (conteúdo principal do site)*/
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px; /* deixando a borda arredondada, conforme propriedade border-radius */
+            box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.26);
+        }
+
+        /* aplicando configurações para os seletores article do site*/
+        article {
+            background-color: lightgrey;
+            padding: 5px;
+        }
+
+        /* configurando o aside dentro do article, ou seja, é filho do article (representado pelo símbolo >)*/
+        article > aside {
+            background-color: rgb(170, 170, 170);
+            text-align: center; /* colocando o conteúdo do aside no centro, conforme text-align*/
+        }
+
+        /* congigurando coisas específicas para o footer (rodapé do site)*/
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 0px;
+        }
+        
+        /* vamos alterar o p dentro do footer*/
+        footer > p {
+            text-align: center;
+            padding: 3px 2px;
+            margin: 0px;
+        }
+
+        footer > p:hover {
+            color: rgb(10, 10, 10);
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        footer > p:active {
+            color: rgb(60, 60, 60);
+        }
+
+        /* configurando uma bola, de acordo com a div com id bola*/
+        div#bola {
+            background-color: white;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%; /* adicionando muito border-radius, como aconteceu neste caso, conseguimos formar uma bola a partir de um quadrado*/
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- divisão do site em grouping tags (header, main, footer)-->
+    <header>
+        <h1>Meu site</h1>
+        <nav>   
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos"></section>
+        <h2>Esporte e Tecnologia</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur quidem, neque animi amet aspernatur, labore laboriosam debitis quo velit eaque ratione in temporibus, adipisci incidunt. Alias vero eligendi libero quibusdam.</p>
+        <section id="noticias">
+            <article>
+               <h2>Noticía sobre o Brasil</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quos culpa reprehenderit provident corporis voluptatum aliquam natus. Asperiores unde deserunt nam explicabo dolores quia minus nesciunt dolorum. Quibusdam, facere expedita.</p>
+                <aside>
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido em aulas durante o Curso em Vídeo</p>
+    </footer>
+    <!-- criando uma bola no style.css, a partir dessa div-->
+    <div id="bola"></div>
+</body>
+</html>

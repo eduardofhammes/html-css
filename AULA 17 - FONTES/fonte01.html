@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        /* adicionando uma font-family de safe combinations*/
+        body {
+            font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, #999999, #fff);
+            font-size: 1.1em; /* testando uso de font-size (recomendado usar só "em" ou "px" - deixar a medida sem espaço do número (ex: 1em ou 16px))*/
+            font-weight: normal;
+            font-style: normal;
+            text-decoration: none;
+
+        }
+        /* adicionando características específicas para o h1 e h2 com o uso da vírgula*/
+        h1, h2 {
+            font: normal bolder 3em 'Work Sans', sans-serif;
+            /* Mesma coisa que:
+            font-family: 'Work Sans', sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: normal;
+            */  
+        }
+        /* font: 
+        font-style font-weigh font-size font-family*/
+        
+        /* adicionando novas caracterísitcas com shorthand*/
+        h3 {
+            font: italic 2em 'Work Sans', sans-serif;
+        }
+        /* adicionando uma fonte específica para o p 
+        p {
+            font-family: 'Courier New', Courier, monospace;
+        }
+            */
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni enim provident officia optio. Ipsam natus sint voluptatem iste aspernatur dolorum? Doloribus eum aliquam similique fuga in non quaerat doloremque aliquid. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus rem similique aliquid optio mollitia! Ducimus magnam error aut, consequuntur omnis nisi totam voluptates, adipisci rem eos nulla atque unde accusamus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ex sunt necessitatibus velit ad repellendus quae. Cum laborum aliquam, dolores sit officia dolorem corporis, nihil omnis eaque inventore, suscipit doloribus!</p>
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure illum beatae veniam dicta ullam culpa alias ipsum animi porro delectus fugit mollitia, nulla id esse voluptatem aperiam nostrum consequuntur reiciendis?</p>
+    <h2>Novo subtítulo do exercício</h2>
+    <h3>Subtítulo de h2</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil asperiores nam numquam, commodi laborum sequi, non quidem molestias veritatis temporibus tempore suscipit ex fugiat, ullam in ab perspiciatis? Alias, iste.</p>
+</body>
+</html>

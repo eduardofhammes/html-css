@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /* alterando propriedades da página com style */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color: red;
+            text-decoration: none; /* retirando o sublinhado dos links*/
+            cursor: pointer;
+            font-weight: bold;
+        }
+        /* :visited - indica quando algo foi visitado
+        como todos os links já foram acessados, será alterado os atributos definidos abaixo*/
+        a:visited {
+            color: darkred;
+        }
+        /* quando passarmos o mouse por cima, alteramos os seguintes atributos(de acordo com a pseudo-classe hover)*/
+        a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+        /*:active diz respeito a quando algum elemento é clicado. Neste caso, os links ficarão com os seguintes atributos quando clicarmos em algum deles */
+        a:active {
+            color: brown;
+        }
+        /* pseudo elementos - alteram o conteúdo de um elemento, sendo representados por dois pontos ::
+        ::after altera o conteúdo do link ao fim do mesmo*/
+        a::after {
+            content: ' (link)'; /* content: conteúdo - altera o que está nesse elemento*/
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgrey;
+        }
+        /* alterando elementos da class especial*/
+        .especial {
+            background-color: gainsboro;
+        }
+        /* adicionando outro pseudo-elemento, porém junto da class especial, alteramos apenas o link que possui essa class colocando o nome da class + pseudo-elemento*/
+        .especial::before {
+            content: '\002713  '; /* adicionando um símbolo na frente de cada link, alterando seu conteúdo de acordo com o pseudo-elemento ::before*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <!-- adicionando links com lista não ordenada-->
+        <ul>
+            <li><a href="https://gustavoguanabara.github.io" target="_blank" rel="external">Repositório GitHub</a></li>
+            <li><a href="https://youtube.com/cursoemvideo" target="_blank" rel="external" class="especial">Canal do Youtube</a></li>
+            <li><a href="https://www.cursoemvideo.com" target="_blank" rel="external">Site do CursoemVideo</a></li>
+        </ul>
+</body>
+</html>

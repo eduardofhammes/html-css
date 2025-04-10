@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com listas</h1>
+    <h2>Listas ordenadas</h2> <!-- listas em que a ordem das coisas importam, como uma receita de bolo-->
+    <ol type="i" start="2"> <!-- ol = ordened list (lista ordenada) - cada item a ser colocada dentro do inicio e fim da tag ol será ordenada. Com o parametro start, definimos em qual número será iniciado a contagem da lista (deve ser um número)-->
+        <li>Acordar</li> <!-- li (list item - item de lista)-->
+        <li>Tomar café</li>
+        <li>Tomar remédio</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Almoçar</li>  
+        <li>Ir para o trabalho</li>
+        <li>Voltar para casa ol</li>
+        <li>Jantar</li>
+        <li>Dormir</li>      
+    </ol>
+    <h2>Listas não ordenadas</h2>
+    <ul type="square"> <!--types: disc, circle e square-->
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Alface</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijao</li>
+    </ul>
+
+    <!-- parte de junção de listas -->
+     <h2>Juntando listas 1.0</h2>
+     <p>Minhas linguagens favoritas</p>
+     <ol type="A">
+        <li>Antigas</li>
+        <ol type="i"> <!-- criando uma sublista, definindo o seu tipo com o parâmetro type-->
+            <li>C</li>
+            <li>C#</li>
+            <li>Java</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="i"> <!-- outra sublista, com type diferente-->
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>Kotlin</li>
+        </ol>
+     </ol>
+
+     <!-- agora, misturamos listas ordenadas (<ol>) com listas não ordenadas (ul)-->
+     <h2>Meus jogos favoritos</h2>
+    <ol>
+        <li>NES</li>
+        <ul type="square">
+            <li>Mario Bros</li>
+            <ul type="circle"> <!-- adicionando uma nova sub-lista, caso seja desejado-->
+                <li>Mario Bros 3</li>
+                <li>Mario: Lost Levels</li>
+            </ul>
+            <li>Ninja Gaiden</li>
+        </ul>
+        <li>SNES</li>
+        <ul type="square"> 
+            <li>Mario</li>
+            <li>Donkey Kong</li>
+        </ul>
+        <li>PlayStation</li>
+        <ul type="square">
+            <li>Final Fantasy</li>
+            <li>Caslevania</li>
+        </ul>
+    </ol>
+
+    <h2>Última parte das listas: Lista de definição</h2>
+    <dl> <!-- definition list-->
+        <dt>Termo</dt> <!-- definition title-->
+        <dd>Descrição</dd> <!-- definition description-->
+    </dl>
+</body>
+</html>

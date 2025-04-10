@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Idroid';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #84E1AD;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px; /* deixando a página toda ser margin*/
+}
+
+header {
+    background-image: linear-gradient(to bottom, rgb(77, 245, 147), #3AD07C, #31AF69, #2B9C5D, #237B4A, #1A5C38);
+    color: white;
+    padding: 20px 5px 8px;
+    margin: 0px;
+    text-align: center;
+}
+
+header > p {
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+nav {
+    text-align: left;
+    padding: 20px 5px 5px 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 0px;
+}
+nav > a {
+    color: #B0F8CF;
+    text-align: left;
+    text-decoration: none;
+    padding: 8px;
+}
+
+nav > a:hover {
+    background-color: #2ea061;
+    color: #1A5C38;
+}
+
+main {
+    width: 700px;
+    background-color: white;
+    margin: auto;
+    padding: 5px 20px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+p {
+    text-indent: 2em; /* alterando para que todos paragrafos tenham espaço/recuo de paragráfos com a propriedade/atributo text-indent*/
+}
+
+.another-page {
+    background-color: rgb(175, 248, 206);
+    color:#197440;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1px 2px;
+}
+
+.edit-text {
+    font-family: 'Idroid', sans-serif;
+    background-image: linear-gradient(to right, rgb(175, 248, 206), white);
+    color: rgb(31, 100, 60);
+    font-size: 1.7em;
+    padding: 0px 5px;
+}
+
+.edit-text#main-text {
+    background-image: none;
+}
+
+p#end {
+    text-align: justify;
+}
+
+/* centralizando a imagem a partir da adição de uma <section>, permitindo que a imagem seja colocada ao meio de acordo com o atributo text-align*/
+section#bugdroid-fix {
+    text-align: center;
+}
+
+aside#video {
+    background-color: #1A5C38;
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+}
+
+aside#other-names {
+    background-color: #C5EBD6;
+    border-radius: 10px;
+    padding: 10px 8px;
+    margin: 20px 0px 0px 0px;
+}
+
+aside > ul > li > span {
+    text-decoration: underline;
+}
+aside > ul > li::before {
+    content: '\002714   ';
+}
+
+aside > p#text-bold-green {
+    background-color: #2FA866;
+    color: white;
+    font-weight: bold;
+    margin: 0px;
+    padding: 20px 5px 20px 5px;
+    
+}
+
+section {
+    margin: p0x 0px 10px 0px;
+    padding: 0px;
+}
+
+footer {
+    background-color: #1A5C38;
+    color: white;
+    text-align: center;
+}
+
+footer > p {
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 15px 0px 0px 0px;
+    padding: 5px;
+}
+
+footer > p > span {
+    font-weight: bold;
+}

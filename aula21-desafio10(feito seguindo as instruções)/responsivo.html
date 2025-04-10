@@ -1,0 +1,41 @@
+<!-- arquivo criado apenas para testar a responsividade-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            /* definindo responsividade para o main. Com o min-width de 240px, o conteúdo irá ficar no meio, se ajustando conforme a responsividade (fica no meio da tela em função do margin: auto). Se for menor de 240px, não vai se ajustar mais.
+            No caso do max-width, o conteúdo (imagens não funcionam, apenas conteúdo do seletor) será ajustado para ficar no meio da tela para largura máxima de 800px. Caso seja maior de 800 a largura, o tamanho do seletor (main nesse caso) vai se manter em 800px (conforme definição do atributo max-width: 800px)
+            Resumo: utilizamos esses dois atributos para manter a responsividade do conteúdo, alterando a responsividade para o intervalo definido entre o min-width e o max-width (nesse caso, o conteúdo ficará se ajustando automaticamente, deixando o conteúdo no meio para telas de 240px até 800px)*/
+            min-width: 240px; 
+            max-width: 800px;
+            margin: auto;
+            }
+
+            img {
+                width: 100%;
+            }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit optio quis nisi aut voluptatem voluptate eius incidunt, cupiditate, rerum nam dolorum consectetur corrupti soluta quisquam, odit mollitia aliquid. Voluptatibus, quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quod, consectetur amet veritatis quaerat voluptates iusto error, quis aliquam quos, aut rem laboriosam a atque. Quam provident deleniti excepturi distinctio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus vero earum ab dolorum fuga, ipsam possimus animi in quidem consectetur maxime iure, quos odio assumenda sint itaque facere, tenetur eveniet.</p>
+        <picture>
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Blok">
+        </picture>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit optio quis nisi aut voluptatem voluptate eius incidunt, cupiditate, rerum nam dolorum consectetur corrupti soluta quisquam, odit mollitia aliquid. Voluptatibus, quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quod, consectetur amet veritatis quaerat voluptates iusto error, quis aliquam quos, aut rem laboriosam a atque. Quam provident deleniti excepturi distinctio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus vero earum ab dolorum fuga, ipsam possimus animi in quidem consectetur maxime iure, quos odio assumenda sint itaque facere, tenetur eveniet.</p>
+    </main>
+</body>
+</html>

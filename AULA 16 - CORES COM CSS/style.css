@@ -1,0 +1,38 @@
+/* adicionando o charset utf-8 abaixo para que não tenha nenhum problema com acentuação */
+@charset "UTF-8";
+
+/* adicionando configurações globais no css para que todo as propriedades do arquivo sejam dessa maneira definida abaixo*/
+* {
+    /*height: 100%; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* adicionando degradê no body, conteúdo do site*/
+body {
+    background-image: linear-gradient(to right, #3BACD9, #308AD9);
+}
+
+/* alterando propriedades do main, uma espécie de div no html*/
+main {
+    background-color: white;
+    border-radius: 10px; /* deixa o main com bordas em forma de circulo, de acordo com o tamanho desejado em px*/
+    box-shadow: 5px 5px 15px #242e3680; /* propriedade para criar uma sombra em volta da div main e deixá-la mais elegante*/
+    width: 600px;
+    padding: 10px;
+    margin: auto; /* propriedade para deixar o conteúdo no meio da tela, independente se aumentar ou diminuir a resolução*/
+    margin-top: 15px;
+}
+h1 {
+    color: #308AD9; 
+    /* propriedade color é a cor da letra, enquanto background-color é o fundo da escrita*/
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(27, 67, 102, 0.486) /* sombra para o texto, semelhante ao box-shadow */
+}
+
+h2 {
+    color: #4AD97C;
+}
+
+/* deixando o texto dos parágrafos justificados */
+p {
+    text-align: justify;
+}

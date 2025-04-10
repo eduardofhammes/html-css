@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/*
+em HTML é id = em CSS é #   id = elemento único
+em HTML é class = em CSS é .   class = vários elementos com mesma class 
+*/
+
+body {
+    background-color: #cbebda;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* configurando todos os h1, quando não tiveram id específicos*/
+h1 {
+    color: #395044;
+}
+
+/*configurando o h1 que tem o id "principal", assim conseguimos alterar este especificamente com h1 + #nomedoid*/
+#principal {
+    color: #385045;
+    background-color: #689480;
+    font-size: 2.3em;
+    text-align: center;
+}
+
+h2{
+    color: #69947E;
+}
+
+/* definindo características específicas para seletores que estão identificados com a class basico no HTML (vários seletores são alterados com essa mudança)*/
+.basico {
+    color: #69947E;
+    font-weight: 900;
+}
+
+.intermediario {
+    color: #949369;
+}
+
+.avancado {
+    color: #946969;
+}
+
+.destaque {
+    background-color: rgba(151, 151, 86, 0.836);
+}

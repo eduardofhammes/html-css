@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos ou simplesmente
+        aumente e diminua o tamanho do seu navegador
+    </p>
+    <!-- utilizando a tag picture para adicionar imagens flexíveis-->
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <!-- resumo do script:
+    Neste caso, crimaos a tag img inicial, colocando a maior imagem, depois adicionar uma nova tag: source = alteramos
+    o parametro media para max-width: e colocamos o tamanho original da foto + 50pixels (em função da barra de rolagem que também ocupa aprox. 50px). Depois, alteramos o parametro scrset para o caminho da imagem m (isso significa, quando abrirmos em um dispositivo com max-width de 1050px, será reproduzida a imagem m) - no parametro type: colocamos a extensão da imagem, nesse caso, image/png. Por fim, adicionamos mais uma tag source, onde alteramos a max-width para 750px, significando que, quando a imagem for de 750px para baixo/menor que 750, será reproduzida a imagem p, de acordo com o parametro srcset, já que colocamos o caminho completo dessa imagem (importante alterar o type também)-->
+
+    <!-- testando novamente a inserção de imagens flexíveis, mas agora começando com a inserção da menor imagem com a tag img, depois partindo para as maiores com a tag source(utilizando o min-width neste caso)-->
+    <hr>
+    <p>Outro teste, agora começando pelo menor foto</p>
+    <picture>
+        <source media="(min-width: 1050px)" srcset="imagens/foto-g.png" type="image/png">
+        <source media="(min-width: 750px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-p.png" alt="Imagem flexível">
+    </picture>
+    <!-- tags utilizadas: picture, img (alteração de parametros src e alt), source(alteração de parâmetros media, srcset e type)-->
+
+    <h1>Rproduzindo Áudio dentro do site</h1>
+    <p>Vamos aprender a reproduzir áudio em HTML5</p>
+    <audio src="midia/baby-sister.mp3" controls autoplay></audio> <!-- tag audio para adicionar o áudio. No parametro scr colocamos o caminho do áudio. Depois, adicionamos dois parametros:
+    autoplay: para tocar automaticamente
+    controls: para criar um pacote de interatividade com o áudio no navegador. a tag <audio> funciona apenas com as extensões MP3, WAV E OGG--> 
+    
+    <p>Agora vamos adicionar de outra forma, com o parametro src dentro de outra a tag: source:src </p>    
+    <!-- adicionando áudio de outra forma, ganhando mais compatibilidade. autoplay: tocar automaticamente (não funcionando hoje); controls: criar painel para utilização do audio; loop: com esse parametro, o audio irá iniciar novamente automaticamente após seu fim-->       
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/baby-sister.mp3" type="audio/mpeg">
+        <!-- caso o áudio não abra, deixar o arquivo para download abaixo:-->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/baby-sister.mp3">Clique aqui para baixar o arquivo</a></p>
+    </audio>    
+</body>
+</html>

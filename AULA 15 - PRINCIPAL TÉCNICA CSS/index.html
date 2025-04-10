@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos Externos</title>
+    <link rel="stylesheet" href="style.css"> <!-- criando referencia ao arquivo style.css, dessa forma, as alterações do style ficarão compartilhadas aqui com as estilizações definidas lá. Sempre referenciar na página html o style.css, assim ele possuirá todas as estilizações-->
+    <!-- ainda podemos misturar as práticas de css, por exemplo, abaixo utilizamos o tipo de css interno, com a tag style junto do css externo, assim modificando essa página a partir dessa técnica-->
+    <style>
+        h1 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body> 
+    <h1>Capítulo 1</h1>
+    <h2>Capítulo 1.1</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus consequatur assumenda cupiditate esse. Modi, dolor ullam. Vitae veritatis fuga eos, mollitia recusandae, sunt dignissimos ab omnis nulla alias optio voluptatibus!</p>
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, quos, nesciunt ipsa rerum eaque dolores rem voluptate, amet excepturi dicta non. Alias placeat saepe asperiores recusandae sequi dolorem dolor maxime.</p>
+    <h1>Capítulo 2</h1>
+    <h2>Capítulo 2.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sunt dolores ipsum magnam excepturi fuga quae nihil similique ex sapiente iure, sequi non repudiandae libero enim facere! Pariatur, sint aut?</p>
+    <!-- utilizando css inline (não recomendado) para demonstrar as várias técnicas de uso do css dentro de uma mesma página html-->
+    <p style="text-align: right;"><a href="pagina002.html" target="_self">Ir para a página 2</a></p> <!-- _self: abrir na mesma página, oposto de _blank-->
+</body>
+</html>

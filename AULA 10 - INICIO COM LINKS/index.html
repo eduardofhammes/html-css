@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Links</h1>
+    <!-- testando o uso da tag a para acessar links externos diretamente do meu site-->
+    <h2>Usando links externos</h2>
+    <p>Utilizando a tag a e seus parâmetros, vamos abrir links externos em novas guias:</p>
+    <!-- tag para inserir links = a. O parâmetro href é onde colocamos o link propriamente. O texto entre o inicio e fim da tag "a" (anchor ou âncora) ficará em destaque para ser clicável-->
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no GitHub</a></p> <!-- aqui testamos os links na prática, colocando o texto clicável entre o inicio e fim da tag a (texto: repositório público no GitHub), além do parâmetro href onde colocamos o link que seremos redirecionados ao clicarmos na âncora-->
+    <!-- também possuímos dois outros parâmtros: target = que preenchemos como _blank = isso significa que quando o usuário clicar no link, será aberto uma nova janela/guia em branco onde o site redirecionado será aberto, mantendo o nosso site ainda em andamento no dispositivo. O parâmetro rel(relative) é utilizado como uma espécie de explicar do que esse site é relativo (no nosso caso, é externo e por isso, definimos esse parâmetro como external)-->
+    <p>Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal gratuito no youtube</a></p> <!-- testando novamente a tag de a para acessar links externos-->
+
+    <h2>Usando links internos</h2>
+    <p>Esta é a primeira página so site. Se você quiser ir para a segunda, basta <a href="pag002.html" rel="next">clicar aqui</a>.</p>
+    <!-- utilizamos o a mesma tag com mesmos parâmetros, porém agora vamos acessar uma outra página do nosso site. Para exemplificar, criamos o arquivo pag002.html que servirá como a outra página. Desse modo, quando clicamos no texto entre a tag a, somos redirecionados para a segunda página do site. No parâmetro rel, colocamos next que indica que estaremos indo a uma próxima página ou seja, avançando dentro do nosso site-->
+     <p>Você também pode ir para a terceira página <a href="noticias/pag003.html" rel="next">clicando aqui</a></p>
+
+     <!-- links para download com arquivos dentro do projeto-->
+      <h2>Links para download</h2>
+      <ul> <!-- inserindo lista não ordenada para dar aspecto de menu-->
+        <!-- colocando o respectivo link em cada item da lista-->
+        <li><a href="banco-de-dados/BancodeDados-Unidade6.pdf" download="BancoDeDados-Unidade6.pdf" type="application/pdf">Baixar o arquivo em PDF</a></li>
+        <li><a href="banco-de-dados/BancodeDados-Unidade6.zip" download="BancoDeDados-Unidade6.zip" type="application.zip"> Baixar o arquivo compactado em zip</a></li>
+      </ul>
+      <!-- em resumo, temos 2 novos parametros na tag a quando queremos colocar um link para download. São eles: download e type-->
+</body>
+</html>
