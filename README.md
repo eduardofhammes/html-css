@@ -4,4 +4,4 @@
  Estou aprendendo a criar sites e agora vou gerenciar os repositórios com git e github
 
 
-<a href="https://eduardofhammes.github.io/projeto-android">Meu principal projeto no momento</a>
+<a href="https://eduardofhammes.github.io/projeto-android" target="_blank">Meu principal projeto no momento</a>
