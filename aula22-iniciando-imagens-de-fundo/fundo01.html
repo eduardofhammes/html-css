@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de imagem de fundo</title>
+    <style>
+
+        /* aplicando imagem de fundo ao site propriamente, visto que estamos definindo ela body{}*/
+        body {
+            background-image: url('imagens/wallpaper002.jpg');
+        }
+
+        /* configurando as divs com css, a partir da class e ids*/
+        div.quadrado {
+            display: inline-block; /* display inline para deixar as divs uma ao lado da outra*/
+            background-color: lightgray;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin-top: 10px;
+            width: 300px;
+            height: 300px;
+        }
+
+        div#q1 {
+            background-color: red;
+        }
+
+        div#q2 {
+            background-image: linear-gradient(to top, skyblue, blue);
+            border-radius: 0px;
+        }
+
+        /* adicionando imagem de fundo nessa div com id q3*/
+        div#q3 {
+            background-image: url('imagens/pattern001.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: local;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- divs de mesma class, porém com id diferente para serem editas no css-->
+    <div class="quadrado" id="q1">
+
+    </div>
+    <div class="quadrado" id="q2">
+
+    </div>
+    <div class="quadrado" id="q3">
+
+    </div>
+</body>
+</html>
