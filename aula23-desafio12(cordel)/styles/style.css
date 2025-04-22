@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+/* adicionando fontes do Google Fonts para uso no projeto*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/* adicionando variáves através do :root*/
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Passion One", sans-serif;
+    --fonte3: "Sriracha", cursive;
+}
 /* configurando todos os elementos e seletores HTML sem margin e padding*/
 * {
     margin: 0px;
@@ -8,6 +19,7 @@
 
 /* configurações para o html e body*/
 html, body {
+    font-family: var(--fonte1);
     min-height: 100vh; /* configurando a altura minima do site para 100% da view height, assim deixando que o site sempre ocupe toda a tela do usuário*/
     background-color: darkgray;
 }
@@ -19,6 +31,8 @@ header {
 }
 
 header > h1 {
+    font-family: var(--fonte2);
+    font-size: 7.5vw; /* alterando o tamanho da fonte para 10vw(view width ou largura da tela). Isso significa que o tamanho da fonte se ajustará responsivamente, de acordo com a largura da tela do usuário, sendo sempre 10% dela*/
     padding-top: 50px;
     font-variant: small-caps; /* adicionando uma variante de texto, alterando para que o texto tenha aspecto que maiúsculo */
 }
@@ -42,6 +56,8 @@ header a:hover, footer a:hover {
 
 /* configurando as sections do site */
 section {
+    font-family: var(--fonte3);
+    font-size: 3vw;
     padding-top: 10vh; /* colocando o padding top e bottom para 10vh(ou 10% da altura da tela do usuário), ajustando o padding propocionalmente a altura da tela*/
     padding-bottom: 10vh;
     line-height: 2em; /* deixa a altura das linhas com valor dobrado conforme 2em*/
@@ -62,8 +78,9 @@ section.imagem {
 
 /* configurando o p dentro da section com class imagem*/
 section.imagem > p {
+    display: inline-block;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.233);
-    max-width: 400px;
 }
 
 footer {
