@@ -1,1 +1,74 @@
 @charset "UTF-8";
+
+/* configurando todos os elementos e seletores HTML sem margin e padding*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* configurações para o html e body*/
+html, body {
+    min-height: 100vh; /* configurando a altura minima do site para 100% da view height, assim deixando que o site sempre ocupe toda a tela do usuário*/
+    background-color: darkgray;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center; /* para alinha todo o texto dentro dessa div para o centro da tela*/
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* adicionando uma variante de texto, alterando para que o texto tenha aspecto que maiúsculo */
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+/* configurando os links em header e footer*/
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.8s; /* adicionando tempo para a transição do :hover*/
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+    color: grey;
+}
+
+/* configurando as sections do site */
+section {
+    padding-top: 10vh; /* colocando o padding top e bottom para 10vh(ou 10% da altura da tela do usuário), ajustando o padding propocionalmente a altura da tela*/
+    padding-bottom: 10vh;
+    line-height: 2em; /* deixa a altura das linhas com valor dobrado conforme 2em*/
+    padding-left: 30px;
+}
+
+/* configurando section com a class normal*/
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+/* configurando section com a class imagem */
+section.imagem {
+    background-color: rgb(85, 85, 85);
+    color: white;
+}
+
+/* configurando o p dentro da section com class imagem*/
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.233);
+    max-width: 400px;
+}
+
+footer {
+    background-color: black;
+    text-align: center; 
+    color: white;
+    padding: 10px;
+}
