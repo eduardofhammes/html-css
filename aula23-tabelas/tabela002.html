@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+
+        /* configurando nosso caption*/
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+            border-radius: 5px;
+        }
+
+        /* aplicando borda para th e td*/
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        /* definindo uma largura específica para a coluna população, colocando um id a ela*/
+        th#pop {
+            width: 50px;
+        }
+
+        /* configurando table data com a class num*/
+        td.num {
+            text-align: right;
+        }
+
+        /* aplicando configurações para o cabeçalho e rodapé semântico da tabela, sendo assim, ambos possuirão as mesmas configs*/
+        thead, tfoot {
+            background-color: grey;
+            color: white;        
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!-- 
+        ANATOMIA PARA TABELAS GRANDES
+            TABLE
+            CAPTION    
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+    <!-- criação de uma tabela grande-->
+    <table>
+        <caption>Cinco maiores Unidades Federativas por número de habitantes</caption> <!-- tag caption, responsável por dar o título da nossa tabela -->
+        <thead> <!-- cabeçalho da tabela-->
+            <tr> <!-- primeira linha da tabela-->
+                <th scope="col">Estado</th> <!-- primeira header(título de coluna) -->
+                <th scope="col" id="pop">População</th> <!-- primeira header(título de coluna) --> 
+            </tr>
+        </thead>
+        
+        <tbody> <!-- corpo da tabela-->
+            <tr>  <!-- primeira linha dentro do body-->
+                <td>São Paulo</td>
+                <td class="num">45 973 194</td>
+            </tr> 
+            <tr> <!-- segunda linha dentro do body-->
+                <td>Minas Gerais</td>
+                <td class="num">21 322 691</td>
+            </tr>
+            <tr> <!-- terceira linha dentro do body-->
+                <td>Rio de Janeiro</td>
+                <td class="num">17 219 679</td>
+            </tr>
+            <tr> <!-- quarta linha dentro do body-->
+                <td>Bahia</td>
+                <td class="num">14 850 513</td>
+            </tr>
+            <tr> <!-- quinta linha dentro do body-->
+                <td>Paraná</td>
+                <td class="num">11 824 665</td>
+            </tr>
+        </tbody>
+        
+        <tfoot> <!-- rodapé da tabela-->
+            <tr> <!-- primeira linha dentro do rodapé-->
+                <th scope="row">Total de habitantes</th> <!-- utilizado o th para representar o título dentro do rodapé-->
+                <td class="num"><strong>111.190.742</strong></td> <!-- ao lado, colocado o td pois representa o valor do total e não o título, como o th-->
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
