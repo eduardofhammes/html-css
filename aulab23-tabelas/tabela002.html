@@ -13,6 +13,7 @@
             width: 500px;
             border-collapse: collapse;
             border: 2px solid black;
+            position: relative; /* definindo posição relativa para que seja possível adicionar a função de congelar o th na config thead > tr > th*/
         }
 
         /* configurando nosso caption*/
@@ -22,6 +23,13 @@
             padding: 10px;
             background-color: lightgrey;
             border-radius: 5px;
+        }
+
+        /* configurando para congelar o th do título para que quando a tela seja rolada verticalmente, o título ainda apareça em cima*/
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: grey;
         }
 
         /* adicionando o efeito zebrado dentro da tabela, editando o tdbody tr:nth-child(2n) para deixar zebrado
@@ -50,6 +58,10 @@
         thead, tfoot {
             background-color: grey;
             color: white;        
+        }
+
+        p {
+            font-size: 2em;
         }
     </style>
 </head>
@@ -106,5 +118,9 @@
             </tr>
         </tfoot>
     </table>
+    <!-- adicionando lorem para testar a funcionalidade do congelamento do th(table header) quando a página sofre o scroll verticalmente(definido em thead > tr > th)-->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem pariatur architecto excepturi odit laborum vel obcaecati voluptates incidunt sed nihil molestiae nam recusandae rem eaque odio illum, quas id magni?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas accusamus quia ratione odit fugiat error dolorum? Itaque, quidem culpa impedit voluptas amet repellendus architecto iure maxime dolores quisquam error consequatur!
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quam modi provident. Labore voluptatum aut, doloribus delectus, aliquid itaque perspiciatis et id tempore incidunt quas dolorem iste assumenda optio praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, nesciunt ipsa nihil culpa ducimus quaerat laudantium dolorum obcaecati laboriosam quidem voluptate quos ullam et quia dignissimos vitae omnis vero eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium ex architecto in est repudiandae laborum libero saepe voluptatem sequi nostrum beatae sint non alias reprehenderit similique, corporis eos? Nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nihil rem dolor repudiandae perspiciatis quibusdam, alias veritatis quidem corporis dolorem odio ut velit totam nulla? Impedit iure magni mollitia sapiente. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum neque ea sit magnam excepturi non quos voluptates aspernatur quisquam praesentium nesciunt autem, quae, dignissimos sunt corrupti distinctio adipisci inventore sapiente?
+    </p>
 </body>
 </html>

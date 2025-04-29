@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <style>
+        /* configurando a fonte utilizada em todo o documento*/
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* configurando a table, definindo uma largura e informando que as bordas devem separar(separar seletores td) */
+        table {
+            border-collapse: separate;
+            width: 400px;
+        }
+
+        /* definindo uma borda em volta de cada célula(td), adicionando um padding para não deixar o td próximo a borda colocada e deixando o texto de cada td ao meio da célula*/
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio 2 - módulo 3 - vídeo 34</h1>
+    <table>
+        <tr>
+            <td colspan="4">A</td> <!-- deixa que essa célula ocupe 4 colunas ao invés de uma só como padrão-->
+            <td rowspan="4">B</td> <!-- deixa que essa célula ocupe 4 linhas ao invés de uma só como padrão-->
+        </tr>
+        <tr>
+            <td rowspan="4">C</td> <!-- deixa que essa célula ocupe 4 linhas ao invés de uma só como padrão-->
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>L</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <td colspan="4">N</td> <!-- deixa que essa célula ocupe 4 colunas ao invés de uma só como padrão-->
+        </tr>
+    </table>
+</body>
+</html>
