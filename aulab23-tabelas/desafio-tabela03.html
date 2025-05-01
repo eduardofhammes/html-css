@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        .alternative-background { /* configurando todos os ths e a class alternative-background*/
+            background-color: grey;
+            color: white;
+            font-weight: 700;
+        }
+
+        .num {
+            text-align: center; /* todo elemento dessa classe vai ter o texto centralizado*/
+        }
+
+        .media-area {
+            text-align: left; /* deixando o texto das células de media das areas ao lado esquerdo*/
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Desafio Módulo 3 - Vídeo 37</h1>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2" scope="col" class="alternative-background">Área</th>
+                <th rowspan="2" scope="col" class="alternative-background">Disciplinas</th>
+                <th colspan="2" scope="colgroup" class="alternative-background">Notas</th>
+                <th rowspan="2" scope="col" class="alternative-background">Média</th>
+            </tr>
+            <tr>
+                <th scope="col" class="alternative-background">Nota 1</th>
+                <th scope="col" class="alternative-background">Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="4" scope="rowgroup" >Exatas</th>
+                <td>Matemática</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+            </tr>
+            <tr>
+                <td >Química</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+            </tr>
+            <tr>
+                <th colspan="4" scope="row" class="alternative-background media-area">Média de exatas</th>
+                <td class="alternative-background num">0.0</td> <!-- definindo duas classes para esse td (.alternative-background e num) a partir do espaço entre a declaração dos nomes das classes -->
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup">Humanas</th>
+                <td>História</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+                <td class="num">0.0</td>
+            </tr>
+            <tr>
+                <th colspan="4" scope="row" class="alternative-background media-area">Média de Humanas</th>
+                <td class="alternative-background num">0.0</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
