@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframe</title>
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe#tela {
+            display: block;
+            margin: 20px auto;
+            width: 88vw;
+            height: 500px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quae, voluptas a veritatis debitis tempora saepe nostrum quod esse accusantium. Sunt minus soluta explicabo aspernatur amet aperiam asperiores fugiat nesciunt.</p>
+
+    <!-- permitindo manipular o iframe junto de liks com o parametro name de <iframe> e target de <a>-->
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="opcao">Primeira página</a></li>
+        <li><a href="paginas-extras/pag002.html" target="opcao">Segunda página</a></li>
+        <li><a href="paginas-extras/pag003.html" target="opcao">Terceira página</a></li>
+    </ul>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea officiis ex, quod esse perspiciatis tempora porro amet non similique facilis totam vitae modi temporibus quidem nisi, quia cumque placeat. Nisi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quam reiciendis praesentium delectus cum, amet molestias obcaecati molestiae possimus atque earum, reprehenderit laboriosam rerum at pariatur corrupti! Reprehenderit, cupiditate voluptate?</p>
+
+    <!-- deixando em src a url de uma imagem, sendo possível alterar clicando nos links da ul-->
+    <iframe id="tela" name="opcao" srcdoc="<h1>Escolha uma das opções acima</h1><p> Lorem</p><img src='imagens/youtube-logo.png'> ">
+        <p>Infelizmente seu navegador não é compatível</p>
+    </iframe>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aperiam odio consequatur cumque necessitatibus nam laborum eos vel. Enim laborum quia reiciendis modi placeat atque tempore neque magni, doloremque ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero dolores fugiat non aperiam ad voluptatum doloremque commodi! Consectetur cupiditate, ratione ea, at magni veniam, officiis ipsa ad saepe reprehenderit nemo.</p>
+</body>
+</html>
