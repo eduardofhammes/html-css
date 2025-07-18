@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Teste com formulários de checkbox e radio button</h1>
+
+    <form action="cadastro.php" method="get">
+
+        <fieldset>
+            <legend>Sexo</legend>
+            <!-- para radio button, o parametro "name" será o mesmo para todos os inputs, enquanto que o id se altera em cada input. Dessa forma, é possível selecionar apenas 1 das opções exibidas
+            "for" do label será o id de cada input-->
+            <input type="radio" name="sex" id="isexmas" value="Masculino"><label for="isexmas"> Masculino</label> <br>
+            <!-- parametro "value" é importante nesses casos de radio button, pois quando selecionamos a opção, ele é mostrado na URL-->
+            <input type="radio" name="sex" id="isexfem" checked value="Feminino"><label for="isexfem"> Feminino</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+                <!-- checkbox, permitindo o usuário selecionar as opções desejadas 
+                iesfut diz respeito ao id do esporte futebol e assim por diante-->
+                <!-- label serve para referenciar o input, assim quando clicado no texto do label, o input checkbox é selecionado ou descelecionado-->
+                <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label><br> <!-- pula linha-->
+                <input type="checkbox" name="esvol" id="iesvol"> <label for="iesvol">Volei</label><br>
+                <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label><br>
+                <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label><br>
+                <input type="checkbox" name="esnat" id="iesnat" checked> <label for="iesnat">Natação</label>
+                <!-- parametro "checked" no input: permite deixar uma opção já pré-selecionado quando carregar a página-->
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar"> <!-- também limpa checkbox selecionado -->
+        </p>
+    </form>
+
+</body>
+</html>
