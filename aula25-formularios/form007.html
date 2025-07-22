@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Formulários com novas funcionalidades</h1>
+    <!-- nesse caso o method precisa ser post, considerando que em textarea, o usuário pode digitar textos enormes, excedendo o limite de 3 mil bytes que o method get aceita-->
+    <form action="cadastro.php" method="post" autocomplete="on">
+
+    <!-- tag select que permite selecionar itens de uma lista existente-->
+    <p>
+        <label for="iest">Estado: </label>
+        <select name="est" id="iest"> 
+
+            <option value="" selected>Escolha sua opção</option> <!-- deixa essa opção seledcionada de acordo com o atributo selected-->
+            <optgroup label="Região Sudeste">
+                <option value="MG">Minas Gerais</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option>
+            </optgroup>
+
+            <!-- dividindo as options com optgroup e em label, inserindo o nome da divisão-->
+            <optgroup label="Região Nordeste">
+                <option value="MA">Maranhão</option>
+                <option value="PE">Pernambuco</option>
+                <option value="RN">Rio Grande do Norte</option>
+            </optgroup>
+        </select>
+    </p>
+
+    <!-- datalist: permite selecionar dentro de uma lista também, porém de outra forma-->
+    <p>
+        <label for="iprof">Informe sua profissão: </label>
+        <input type="text" name="prof" id="iprof" list="lstprof">
+        <datalist id="lstprof"> <!-- permite vincular com a list, colocando o mesmo id da datalist-->            
+            <option value="ADM">Administrador</option>
+            <option value="CONT">Contador</option>
+            <option value="DEV">Desenvolvedor</option>
+            <option value="PROF">Professor</option>
+        </datalist>
+    </p>
+
+    <!-- textarea: permite mensagens grandes, com tamanho basicamente ilimitado 
+    Em rows e cols é colocado o tamanho inicial-->
+    <p>
+        <label for="imsg">Mensagem: </label><br> <!-- br para quebrar e deixar a textarea abaixo-->
+        <textarea name="msg" id="imsg" cols="30" rows="5" placeholder="Detalhe a situação aqui"></textarea>
+    </p>
+
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+    </form>
+</body>
+</html>
