@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="iano">Em que ano você nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2025" placeholder="Ex: 1990" oninput="calculaIdade()">
+        </p>
+
+        <p>
+            Você tem <output name="age" id="iage">0</output> anos!
+            <!-- calcula a idade da pessoa, pegando o ano atual e fazendo menos a idade inserida no input, conforme o script Javascript abaixo do form -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <script>
+        // função para calcular idade, utilizando objetos e funções diversas
+        function calculaIdade() {
+            let anoAtual = new Date().getFullYear();
+
+            iage.innerHTML = Number(anoAtual) - Number(iano.value);
+            // subsituindo o conteúdo HTML do elemento que o tem o id iage pela subtração do ano atual e op ano informado no input que tem o id iano
+        }
+    </script>
+</body>
+</html>
