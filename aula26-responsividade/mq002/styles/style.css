@@ -21,3 +21,13 @@ h1 {
     text-shadow: 2px 2px #0c1455; /* sombrea no texto*/
     padding: 10px;
 }
+
+p {
+    color: white;
+    padding: 7px;
+}
+
+p > span {
+    font-weight: bolder;
+    display: none;
+}

@@ -6,3 +6,7 @@ body {
     background-image: url(../imagens/cev-portrait.jpg);
     background-position: center bottom; /* configurando apenas a posição quando estiver em retrato */
 }
+
+p > span#portrait-orientation {
+    display: inline-block;
+}
