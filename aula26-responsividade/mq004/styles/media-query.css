@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/* Todas as demais midías que não sejam para mobile */
+
+/* Typical Device Breakpoint
+Pequenas telas: até 600px
+Celular: 600px até 768px 
+Tablet: 768px até 992px 
+Monitores Desktop: 992px até 1200px 
+Monitores grandes e TV: acima de 1200px */
+
+
+/* Versão para impressora */
+@media print {
+    
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg); /* fundo desnecessário já que na impressão não há como colocar fundo */
+    }
+
+    main {
+        width: 95vw;
+        border: 2px solid black;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    main:after {
+        content: 'Impressão do site eduardofhammes.github.io';
+    }
+
+    img#phone { display: none; }
+    img#print { 
+        display: block;
+        width: 50px;
+    }
+
+}
+
+/* Versão para tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    /* alterando a imagem de fundo nesse tamanho*/
+    body {
+        background-image: url('../imagens/back-tablet.jpg');
+    }
+
+    /* alterando a imagem visível nesse tamanho*/
+    img#phone { display: none; }
+    img#tablet { display: block; }
+}
+
+/* Versão para Monitor Desktop */
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    body {
+        background-image: url('../imagens/back-pc.jpg');
+    }
+
+    img#phone { display: none; }
+    img#pc { display: block; }
+}
+
+/* Versão para Monitor grande e TV */
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url('../imagens/back-tv.jpg');
+    }
+
+    img#phone { display: none; }
+    img#tv { display: block; }
+}
+
