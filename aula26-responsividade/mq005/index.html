@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Responsivo</title>
     <link rel="stylesheet" href="styles/style.css">
+    <!-- referenciando o link para usar um icon de menu-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 </head>
 <body>
     <header>
         <h1>Meu site com Menu Responsivo</h1>
-        <menu>
-            <ul>
+        <!-- inserindo icon do menu com a tag <i> e o nome da class que consta no Google Fonts
+        Referenciando função quando clicado no ícone(onclick = nomeDaFuncao()) -->
+        <i id= "burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+        <menu id="completo">
+            <ul>             
                 <li><a href="#">Opção 1</a></li>
                 <li><a href="#">Opção 2</a></li>
                 <li><a href="#">Opção 3</a></li>
@@ -28,5 +33,20 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis eum quod voluptate ducimus neque alias, corrupti voluptates autem officia quae provident assumenda impedit qui id doloribus ipsum reiciendis vitae. Voluptatibus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis deserunt enim consequuntur repellendus, quas dolorum aperiam? Ab vitae at enim accusamus aut praesentium, ut commodi, maxime consequatur eligendi, nostrum nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur in, facere dolorem saepe temporibus minus eaque distinctio! Odio et officiis, quos sint error ex labore a. Facere, placeat fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque assumenda quam aspernatur itaque, soluta hic, inventore perferendis rem eveniet amet. Ipsa tenetur voluptatum voluptas consequatur, neque laboriosam ducimus assumenda.</p>
         </article>
     </main>
+
+    <!-- função para manipular o menu quando for clicado -->
+    <script>
+        function clickMenu() {
+            
+            const menuCompleto = document.getElementById('completo')
+            
+            // se o display já for block, altera para none depois
+            if(menuCompleto.style.display == 'block') {
+                menuCompleto.style.display = 'none'
+            } else {
+                menuCompleto.style.display = 'block' 
+            }
+        }
+    </script>
 </body>
 </html>
