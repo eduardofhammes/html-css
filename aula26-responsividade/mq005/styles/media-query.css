@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* telas pequenas, porém maiores que celulares */
+@media screen and (min-width: 768px) {
+
+    /* retirando o símbolo */
+    i#burguer {
+        display: none;
+    }
+
+    /* fazendo aparecer o menu horizontal */
+    menu {
+        display: block;
+    }
+
+    /* deixando o menu aparecendo, colocando cada li como inline-block*/
+    menu > ul > li {
+        display: inline-block;
+        width: 115px;
+    }
+
+    menu > ul > li > a {
+        border-radius: 7px;
+        margin: 4px;
+    }
+
+    menu > ul > li > a:hover {
+        transform: translate(4px, 2px);
+        transition-duration: 0.4s;
+    }
+}
+
+/* css em telas grandes, acima de 1200px*/
+@media screen and (min-width: 1200px) {
+
+    /* deixar menu centralizado */
+    menu > ul {
+        text-align: center;
+    }
+
+    menu > ul > li {
+        width: 125px;
+    }
+
+    menu > ul > li > a {
+        padding: 12px;
+    }
+}

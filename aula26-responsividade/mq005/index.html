@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Responsivo</title>
-    <link rel="stylesheet" href="styles/style.css">
     <!-- referenciando o link para usar um icon de menu-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media-query.css">
 </head>
-<body>
+
+<!-- função mudouTamanho para quando o body for redimensionado -->
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu site com Menu Responsivo</h1>
         <!-- inserindo icon do menu com a tag <i> e o nome da class que consta no Google Fonts
         Referenciando função quando clicado no ícone(onclick = nomeDaFuncao()) -->
-        <i id= "burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+        <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
         <menu id="completo">
             <ul>             
                 <li><a href="#">Opção 1</a></li>
@@ -36,10 +39,17 @@
 
     <!-- função para manipular o menu quando for clicado -->
     <script>
+        const menuCompleto = document.getElementById('completo')
+
+        function mudouTamanho() {
+            if(window.innerWidth >= 768) {
+                menuCompleto.style.display = 'block'
+            } else {
+                menuCompleto.style.display = 'none';
+            }
+        }
+
         function clickMenu() {
-            
-            const menuCompleto = document.getElementById('completo')
-            
             // se o display já for block, altera para none depois
             if(menuCompleto.style.display == 'block') {
                 menuCompleto.style.display = 'none'
